@@ -176,9 +176,9 @@ connection is the ability to detect premature connection shutdowns.
 ## Compression
 
 HTTP provides a way for the client and server to negotiate and choose among
-sevel compression algorithms. The gzip algorithm being the perhaps most widely
-used one, with brotli being a recent addition that often compresses data even
-better.
+several compression algorithms. The gzip algorithm being the perhaps most
+widely used one, with brotli being a recent addition that often compresses
+data even better.
 
 FTP offers an official "built-in" run length encoding that compresses the
 amount of data to send, but not by a great deal on ordinary binary data. It
@@ -220,6 +220,10 @@ listing directory contents (LIST and NLST) don't have a specified output
 format so it's a pain to write programs to parse the output. Latter specs
 (RFC3659) have addressed this with new commands like MLSD, but they are not
 widely implemented or supported by neither servers nor clients.
+
+Directory listings over HTTP are usually done either by serving HTML showing
+the dir contents or by the use of WebDAV which is an additional protocol run
+"over" or in addition to HTTP.
 
 ## Proxy Support
 
